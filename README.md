@@ -1300,18 +1300,9 @@ class HttpRequester
 
 ### Princício da Substituição de Liskov (LSP)
 
-This is a scary term for a very simple concept. It's formally defined as "If S
-is a subtype of T, then objects of type T may be replaced with objects of type S
-(i.e., objects of type S may substitute objects of type T) without altering any
-of the desirable properties of that program (correctness, task performed,
-etc.)." That's an even scarier definition.
+Este é um termo assustador para um conceito muito simples. É formalmente definido como "Se S é um subtipo de T, então objetos do tipo T podem ser substituídos por objetos do tipo S (ou seja, objetos do tipo S podem substituir objetos do tipo T) sem alterar nenhuma das propriedades desejáveis desse programa. (correção, tarefa executada etc.) ". Essa é uma definição ainda mais assustadora.
 
-The best explanation for this is if you have a parent class and a child class,
-then the base class and child class can be used interchangeably without getting
-incorrect results. This might still be confusing, so let's take a look at the
-classic Square-Rectangle example. Mathematically, a square is a rectangle, but
-if you model it using the "is-a" relationship via inheritance, you quickly
-get into trouble.
+A melhor explicação para isso é se você tiver uma classe pai e uma classe filho, então a classe base e a classe filho poderão ser usadas de forma intercambiável sem obter resultados incorretos. Isso ainda pode ser confuso, então vamos dar uma olhada no exemplo clássico do retângulo quadrado. Matematicamente, um quadrado é um retângulo, mas se você o modelar usando o relacionamento "is-a" por herança, você rapidamente terá problemas.
 
 **Ruim:**
 
@@ -1441,13 +1432,10 @@ renderLargeRectangles($shapes);
 
 ### Princípio da Segregação de interface (ISP)
 
-ISP states that "Clients should not be forced to depend upon interfaces that
-they do not use." 
+O provedor declara que "os clientes não devem ser forçados a depender das interfaces que não usam".
 
-A good example to look at that demonstrates this principle is for
-classes that require large settings objects. Not requiring clients to setup
-huge amounts of options is beneficial, because most of the time they won't need
-all of the settings. Making them optional helps prevent having a "fat interface".
+Um bom exemplo que demonstra esse princípio é para
+classes que requerem objetos de configurações grandes. Não é necessário exigir que os clientes configurem grandes quantidades de opções, pois na maioria das vezes eles não precisam de todas as configurações. Torná-los opcionais ajuda a evitar uma "interface gorda".
 
 **Ruim:**
 
@@ -1488,7 +1476,7 @@ class Robot implements Employee
 
 **Bom:**
 
-Not every worker is an employee, but every employee is an worker.
+Nem todo trabalhador é um funcionário, mas todo funcionário é um trabalhador.
 
 ```php
 interface Workable
