@@ -1520,11 +1520,9 @@ class Robot implements Workable
 
 ### Princípio da Injeção de dependências (DIP)
 
-This principle states two essential things:
-1. High-level modules should not depend on low-level modules. Both should
-depend on abstractions.
-2. Abstractions should not depend upon details. Details should depend on
-abstractions.
+Este princípio afirma duas coisas essenciais:
+1. Os módulos de alto nível não devem depender dos módulos de baixo nível. Ambos devem depender de abstrações.
+2. As abstrações não devem depender de detalhes. Os detalhes devem depender das abstrações.
 
 This can be hard to understand at first, but if you've worked with PHP frameworks (like Symfony), you've seen an implementation of this principle in the form of Dependency
 Injection (DI). While they are not identical concepts, DIP keeps high-level
