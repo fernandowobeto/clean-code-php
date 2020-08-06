@@ -1524,12 +1524,9 @@ Este princípio afirma duas coisas essenciais:
 1. Os módulos de alto nível não devem depender dos módulos de baixo nível. Ambos devem depender de abstrações.
 2. As abstrações não devem depender de detalhes. Os detalhes devem depender das abstrações.
 
-This can be hard to understand at first, but if you've worked with PHP frameworks (like Symfony), you've seen an implementation of this principle in the form of Dependency
-Injection (DI). While they are not identical concepts, DIP keeps high-level
-modules from knowing the details of its low-level modules and setting them up.
-It can accomplish this through DI. A huge benefit of this is that it reduces
-the coupling between modules. Coupling is a very bad development pattern because
-it makes your code hard to refactor.
+Ele pode ser difícil de entender no começo, mas se você já trabalhou com frameworks PHP (como o Symfony), já deve ter visto uma implementação deste princípio na forma de Injeção de Dependência ou Dependency Injection (DI). 
+Embora não sejam conceitos idênticos, o DIP mantém o conhecimento dos módulos de alto nível sobre os seus módulos de baixo nível e configurá-los.
+Isso pode ser feito através do DIP. Um dos grandes benefícios disso é que reduz o acoplamento entre os módulos. O acoplamento é um padrão de desenvolvimento muito ruim, porque dificulta a refatoração do seu código.
 
 **Ruim:**
 
@@ -1899,10 +1896,27 @@ function showList($employees)
 
 ## Traduções
 
-This is also available in other languages:
+Também disponível em outros idiomas:
 
- * ![cn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/China.png) **Chinese:**
-   * [yangweijie/clean-code-php](https://github.com/yangweijie/clean-code-php)
+* :cn: **Chinese:**
    * [php-cpm/clean-code-php](https://github.com/php-cpm/clean-code-php)
+* :ru: **Russian:**
+   * [peter-gribanov/clean-code-php](https://github.com/peter-gribanov/clean-code-php)
+* :es: **Spanish:**
+   * [fikoborquez/clean-code-php](https://github.com/fikoborquez/clean-code-php)
+* :brazil: **Portuguese:**
+   * [fabioars/clean-code-php](https://github.com/fabioars/clean-code-php)
+   * [jeanjar/clean-code-php](https://github.com/jeanjar/clean-code-php/tree/pt-br)
+* :thailand: **Thai:**
+   * [panuwizzle/clean-code-php](https://github.com/panuwizzle/clean-code-php)
+* :fr: **French:**
+   * [errorname/clean-code-php](https://github.com/errorname/clean-code-php)
+* :vietnam: **Vietnamese**
+   * [viethuongdev/clean-code-php](https://github.com/viethuongdev/clean-code-php)
+* :kr: **Korean:**
+   * [yujineeee/clean-code-php](https://github.com/yujineeee/clean-code-php)
+* :tr: **Turkish:**
+   * [anilozmen/clean-code-php](https://github.com/anilozmen/clean-code-php)
+
 
 **[⬆ voltar para o topo](#sumário)**
