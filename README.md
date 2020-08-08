@@ -1607,11 +1607,9 @@ class Manager
 
 ### Use method chaining
 
-This pattern is very useful and commonly used in many libraries such
-as PHPUnit and Doctrine. It allows your code to be expressive, and less verbose.
-For that reason, use method chaining and take a look at how clean your code
-will be. In your class functions, simply use `return $this` at the end of every `set` function,
-and you can chain further class methods onto it.
+Este padrão é muito útil e comumente usado em muitas bibliotecas, como como PHPUnit e Doctrine. Ele permite que seu código seja expressivo e menos verboso.
+Por esse motivo, use o encadeamento de métodos (chaining method) e observe o quão limpo o seu código estará. Em seus métodos de classe, simplesmente use `return $this` no final de cada função `set`,
+e você pode encadear outros métodos de classe nele.
 
 **Ruim:**
 
