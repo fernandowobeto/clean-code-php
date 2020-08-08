@@ -1698,22 +1698,15 @@ $car = (new Car())
 
 ### Prefira composição do que herança
 
-As stated famously in [*Design Patterns*](https://en.wikipedia.org/wiki/Design_Patterns) by the Gang of Four,
-you should Prefira composição do que herança where you can. There are lots of
-good reasons to use inheritance and lots of good reasons to use composition.
-The main point for this maxim is that if your mind instinctively goes for
-inheritance, try to think if composition could model your problem better. In some
-cases it can.
+Conforme declarado em [*Design Patterns*](https://en.wikipedia.org/wiki/Design_Patterns) pelo Gang of Four, você deve preferir composição do que herança onde puder. Há muitas boas razões para usar herança e muitas boas razões para usar composição.
+O ponto principal desta máxima é que se sua mente instintivamente buscar herança, tente pensar se a composição poderia modelar melhor o seu problema. Em alguns casos pode.
 
-You might be wondering then, "when should I use inheritance?" It
-depends on your problem at hand, but this is a decent list of when inheritance
-makes more sense than composition:
+Você pode estar se perguntando então, "quando devo usar herança?" Isto depende do seu problema em questão, mas esta é uma lista decente de quando a herança
+faz mais sentido do que composição:
 
-1. Your inheritance represents an "is-a" relationship and not a "has-a"
-relationship (Human->Animal vs. User->UserDetails).
-2. You can reuse code from the base classes (Humans can move like all animals).
-3. You want to make global changes to derived classes by changing a base class.
-(Change the caloric expenditure of all animals when they move).
+1. Sua herança representa um relacionamento "é um" e não um "tem um" relacionamento (Human -> Animal vs. User -> UserDetails).
+2. Você pode reutilizar o código das classes base (os humanos podem se mover como todos os animais).
+3. Você deseja fazer alterações globais nas classes derivadas alterando uma classe base. (Mude o gasto calórico de todos os animais quando eles se movem).
 
 **Ruim:**
 
