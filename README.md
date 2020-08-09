@@ -1787,16 +1787,12 @@ class Employee
 
 ## Não repita você mesmo (DRY)
 
-Try to observe the [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principle.
+Tente observar o princípio [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't repeat yourself.
 
-Do your absolute best to avoid duplicate code. Duplicate code is bad because 
-it means that there's more than one place to alter something if you need to 
-change some logic.
+Faça o seu melhor absoluto para evitar códigos duplicados. O código duplicado é ruim porque significa que há mais de um lugar para alterar algo se você precisar mudar alguma lógica.
 
-Imagine if you run a restaurant and you keep track of your inventory: all your 
-tomatoes, onions, garlic, spices, etc. If you have multiple lists that
-you keep this on, then all have to be updated when you serve a dish with
-tomatoes in them. If you only have one list, there's only one place to update!
+Imagine que você administra um restaurante e mantém o controle de seu inventário: todos os seus tomates, cebolas, alho, especiarias, etc. Se você tiver várias listas que você mantém isso, então tudo tem que ser atualizado quando você serve um prato com
+tomates neles. Se você tem apenas uma lista, só há um lugar para atualizar!
 
 Oftentimes you have duplicate code because you have two or more slightly
 different things, that share a lot in common, but their differences force you
