@@ -1791,20 +1791,11 @@ Tente observar o princípio [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_y
 
 Faça o seu melhor absoluto para evitar códigos duplicados. O código duplicado é ruim porque significa que há mais de um lugar para alterar algo se você precisar mudar alguma lógica.
 
-Imagine que você administra um restaurante e mantém o controle de seu inventário: todos os seus tomates, cebolas, alho, especiarias, etc. Se você tiver várias listas que você mantém isso, então tudo tem que ser atualizado quando você serve um prato com
-tomates neles. Se você tem apenas uma lista, só há um lugar para atualizar!
+Imagine que você administra um restaurante e mantém o controle de seu inventário: todos os seus tomates, cebolas, alho, especiarias, etc. Se você tiver várias listas que você mantém isso, então tudo tem que ser atualizado quando você serve um prato com tomates neles. Se você tem apenas uma lista, só há um lugar para atualizar!
 
-Oftentimes you have duplicate code because you have two or more slightly
-different things, that share a lot in common, but their differences force you
-to have two or more separate functions that do much of the same things. Removing 
-duplicate code means creating an abstraction that can handle this set of different 
-things with just one function/module/class.
+Frequentemente, você tem código duplicado porque tem duas ou mais coisas ligeiramente diferentes, que compartilham muito em comum, mas suas diferenças o forçam a ter duas ou mais funções separadas que fazem muitas das mesmas coisas. Remover código duplicado significa criar uma abstração que pode lidar com esse conjunto de coisas diferentes com apenas uma função / módulo / classe.
 
-Getting the abstraction right is critical, that's why you should follow the
-SOLID principles laid out in the [Classes](#classes) section. Bad abstractions can be
-worse than duplicate code, so be careful! Having said this, if you can make
-a good abstraction, do it! Don't repeat yourself, otherwise you'll find yourself 
-updating multiple places anytime you want to change one thing.
+Obter a abstração certa é fundamental, por isso você deve seguir os princípios SOLID definidos na seção [Classes](#classes). Abstrações ruins podem ser piores do que código duplicado, então tome cuidado! Dito isso, se você pode fazer uma boa abstração, faça! Não se repita, caso contrário, você atualizará vários lugares sempre que quiser mudar alguma coisa.
 
 **Ruim:**
 
@@ -1864,7 +1855,7 @@ function showList($employees)
 
 **Very good:**
 
-It is better to use a compact version of the code.
+É melhor usar uma versão compacta do código.
 
 ```php
 function showList($employees)
