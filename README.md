@@ -1853,7 +1853,7 @@ function showList($employees)
 }
 ```
 
-**Very good:**
+**Muito bom:**
 
 É melhor usar uma versão compacta do código.
 
