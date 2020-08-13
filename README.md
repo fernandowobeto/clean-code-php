@@ -1787,7 +1787,7 @@ class Employee
 
 ## Não repita você mesmo (DRY)
 
-Tente observar o princípio [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't repeat yourself.
+Tente observar o princípio [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't repeat yourself).
 
 Faça o seu melhor absoluto para evitar códigos duplicados. O código duplicado é ruim porque significa que há mais de um lugar para alterar algo se você precisar mudar alguma lógica.
 
