@@ -117,7 +117,7 @@ $json = $serializer->serialize($data, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT
 
 ```php
 // What the heck is 4 for?
-if ($user->access & 4) {
+if ($user->access === 4) {
     // ...
 }
 ```
@@ -133,7 +133,7 @@ class User
     const ACCESS_DELETE = 8;
 }
 
-if ($user->access & User::ACCESS_UPDATE) {
+if ($user->access === User::ACCESS_UPDATE) {
     // do edit ...
 }
 ```
