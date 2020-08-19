@@ -419,6 +419,24 @@ $message = new Email(...);
 $message->send();
 ```
 
+**Ruim:**
+
+```php
+public function user($email)
+{
+    // ...
+}
+```
+
+**Bom:**
+
+```php
+public function getUserByEmail($email)
+{
+    // ...
+}
+```
+
 **[⬆ voltar para o topo](#sumário)**
 
 ### Funções devem ter apenas um nível de abstração
