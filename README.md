@@ -12,9 +12,11 @@
      * [Evite mapa mental](#evite-mapa-mental)
      * [Não coloque contexto desnecessário](#não-coloque-contexto-desnecessário)
      * [Use argumentos padrão ao invéis de condicionais](#use-argumentos-padrão-ao-invéis-de-condicionais)
+     * [Evite ao máximo variáveis desnecessárias](#evite-ao-máximo-variáveis-desnecessários)
   3. [Funções](#funções)
      * [Parâmetros de funções (2 ou menos)](#parâmetros-de-funções-2-ou-menos)
      * [Funções devem fazer apenas uma coisa](#funções-devem-fazer-apenas-uma-coisa)
+     * [Use type hinting para parâmetros de método](#use-type-hinting-para-parâmetros)
      * [Nome de função deve dizer o que ela faz](#nome-de-função-deve-dizer-o-que-ela-faz)
      * [Funções devem ter apenas um nível de abstração](#funções-devem-ter-apenas-um-nível-de-abstração)
      * [Não use flags como parâmetros](#não-use-flags-como-parâmetros)
@@ -289,6 +291,38 @@ function createMicrobrewery(string $breweryName = 'Hipster Brew Co.')
 
 **[⬆ voltar para o topo](#sumário)**
 
+### Evite ao máximo variáveis desnecessárias
+
+Basicamente, se você utiliza a variável mais de 2 vezes em um código, mantenha essa variável, caso contrário, use-a diretamente dentro do código. Isso melhora a legibilidade e torna seu código muito mais limpo.
+
+**Ruim**
+```php
+public function create()
+{
+    $zones = Zone::get();
+
+    $data = [
+        'zones' => $zones,
+    ];
+
+    return view('customer.create', [
+        'data' => $data
+    ]);
+} 
+```
+
+**Bom**
+```php
+public function create()
+{
+    return view('customer.create', [
+        'zones' => Zone::get()
+    ]);
+} 
+```
+
+**[⬆ voltar para o topo](#sumário)**
+
 ## Funções
 
 ### Parâmetros de funções (2 ou menos)
@@ -380,6 +414,39 @@ function isClientActive($client)
 ```
 
 **[⬆ voltar para o topo](#sumário)**
+
+### Use type hinting para parâmetros de método
+
+Basicamente, o parâmetro que você usa com os métodos será interpretado de forma diferente por diferentes usuários.
+
+Portanto, se você usar Type Hinting, isso ajudará os usuários a lerem seu código, até mesmo sua IDE interpretará o hint e tentará completar automaticamente, e o PHP lançará erros e avisos apropriados no mesmo.
+
+**Ruim**
+
+Aqui não sabemos se o parâmetro `$user` é um inteiro, array, objeto ou qualquer outro tipo
+
+```php
+public function show($user)
+{
+  //
+}
+```
+
+**Bom**
+
+```php
+public function show(User $user)
+{
+    // ...
+}
+```
+
+```php
+public function schoolFunction(array $guests)
+{
+    // ...
+}
+```
 
 ### Nome de função deve dizer o que ela faz
 
