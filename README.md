@@ -428,7 +428,7 @@ Aqui não sabemos se o parâmetro `$user` é um inteiro, array, objeto ou qualqu
 ```php
 public function show($user)
 {
-  //
+    // ...
 }
 ```
 
