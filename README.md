@@ -450,6 +450,8 @@ public function schoolFunction(array $guests)
 
 ### Nome de função deve dizer o que ela faz
 
+O nome das função ou método deve ser claro em relação ao seu objetivo / ação.
+
 **Ruim:**
 
 ```php
