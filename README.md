@@ -448,6 +448,8 @@ public function schoolFunction(array $guests)
 }
 ```
 
+**[⬆ voltar para o topo](#sumário)**
+
 ### Nome de função deve dizer o que ela faz
 
 O nome das função ou método deve ser claro em relação ao seu objetivo / ação.
