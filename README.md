@@ -19,6 +19,7 @@
      * [Use type hinting para parâmetros de método](#use-type-hinting-para-parâmetros-de-método)
      * [Nome de função deve dizer o que ela faz](#nome-de-função-deve-dizer-o-que-ela-faz)
      * [Funções devem ter apenas um nível de abstração](#funções-devem-ter-apenas-um-nível-de-abstração)
+     * [Utilize o padrão de return early para funções](#utilizeo-padrao-de-return-early-para-funções)
      * [Não use flags como parâmetros](#não-use-flags-como-parâmetros)
      * [Evite efeito colateral](#evite-efeito-colateral)
      * [Não escreva funções globais](#não-escreva-funções-globais)
@@ -643,6 +644,38 @@ class BetterJSAlternative
             // parse...
         }
     }
+}
+```
+
+**[⬆ voltar para o topo](#sumário)**
+
+### Utilize o padrão de return early para funções
+
+Utilize o padrão `return early` para funções e fluxos mais claros.
+
+**Ruim:**
+
+```php
+function isShopOpen($day)
+{
+    if ($day) {
+        return in_array(strtolower($day), ['friday', 'saturday', 'sunday']) ? true : false;
+    }else{
+        return false;
+    }
+}
+```
+
+**Bom:**
+
+```php
+function isShopOpen($day)
+{
+    if (empty($day)) {
+        return false;
+    }
+
+    return in_array(strtolower($day), ['friday', 'saturday', 'sunday']) ? true : false;
 }
 ```
 
