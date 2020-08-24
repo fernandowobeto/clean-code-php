@@ -59,7 +59,7 @@ Inspirado em [clean-code-javascript](https://github.com/ryanmcdermott/clean-code
 
 ## Variáveis
 
-### Use variáveis pronunciaveis e com significado claro
+### Use variáveis pronunciáveis e com significado claro
 
 **Ruim:**
 
@@ -96,10 +96,10 @@ getUser();
 
 ### Use nomes pesquisáveis (parte 1)
 
-Nós vamos ler mais código do que escrever. É importante que o código que nós escrevemos é
+Nós vamos ler mais código do que escrever. É importante que o código que nós escrevemos seja
 legível e pesquisável. Por *não* nomear variáveis que sejam significativas para o entendimento
 do nosso programa, nós machucamos nossos leitores.
-Faça variáveis com nomes pesquisáveis.
+Escreva variáveis com nomes pesquisáveis.
 
 **Ruim:**
 
@@ -170,7 +170,7 @@ saveCityZipCode($city, $zipCode);
 
 **Bom:**
 
-Diminui a dependencia do regex nomeando os subpadrões.
+Diminui a dependência do regex nomeando os subpadrões.
 
 ```php
 $address = 'One Infinite Loop, Cupertino 95014';
@@ -184,8 +184,8 @@ saveCityZipCode($matches['city'], $matches['zipCode']);
 
 ### Evite mapa mental
 
-Não forece o leitor do seu código traduzir o que as variáveis significam.
-Explicito é melhor que implicito.
+Nada favorece o leitor do seu código traduzir o que as variáveis significam.
+Explícito é melhor que implicito.
 
 **Ruim:**
 
@@ -223,8 +223,7 @@ foreach ($locations as $location) {
 
 ### Não coloque contexto desnecessário
 
-Se o nome de sua classe/objeto diz alguma coisa, não repita no nome 
-de suas variáveis.
+Se o nome de sua classe/objeto diz alguma coisa, não repita no nome de suas propriedades.
 
 **Ruim:**
 
