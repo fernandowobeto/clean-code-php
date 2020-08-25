@@ -73,7 +73,7 @@ $ymdstr = $moment->format('y-m-d');
 $currentDate = $moment->format('y-m-d');
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Use o mesmo vocabulário para o mesmo tipo de variável
 
@@ -92,7 +92,7 @@ getUserProfile();
 getUser();
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Use nomes pesquisáveis (parte 1)
 
@@ -141,7 +141,7 @@ if ($user->access === User::ACCESS_UPDATE) {
 }
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Use nomes explicativos
 
@@ -180,7 +180,7 @@ preg_match($cityZipCodeRegex, $address, $matches);
 saveCityZipCode($matches['city'], $matches['zipCode']);
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Evite mapa mental
 
@@ -219,7 +219,7 @@ foreach ($locations as $location) {
 }
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Não coloque contexto desnecessário
 
@@ -251,7 +251,7 @@ class Car
 }
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Use argumentos padrão ao invés de condicionais
 
@@ -290,7 +290,7 @@ function createMicrobrewery(string $breweryName = 'Hipster Brew Co.')
 }
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Evite ao máximo variáveis desnecessárias
 
@@ -322,7 +322,7 @@ public function create()
 } 
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ## Funções
 
@@ -369,7 +369,7 @@ function createMenu(MenuConfig $config)
 }
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Funções devem fazer apenas uma coisa
 
@@ -414,7 +414,7 @@ function isClientActive($client)
 }
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Use type hinting para parâmetros de método
 
@@ -449,7 +449,7 @@ public function schoolFunction(array $guests)
 }
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Nome de função deve dizer o que ela faz
 
@@ -509,7 +509,7 @@ public function getUserByEmail($email)
 }
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Funções devem ter apenas um nível de abstração
 
@@ -647,7 +647,7 @@ class BetterJSAlternative
 }
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Utilize o padrão de return early para funções
 
@@ -679,7 +679,7 @@ function isShopOpen($day)
 }
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Não use flags como parâmetros
 
@@ -714,7 +714,7 @@ function createTempFile($name)
 }
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Evite efeito colateral
 
@@ -766,7 +766,7 @@ var_dump($name); // 'Ryan McDermott';
 var_dump($newName); // ['Ryan', 'McDermott'];
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Não escreva funções globais
 
@@ -816,7 +816,7 @@ $configuration = new Configuration([
 
 Agora você deve usar a instância de `Configuration` na sua aplicação.
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Não use o padrão Singleton
 
@@ -878,7 +878,7 @@ $connection = new DBConnection($dsn);
 
 E agora você deve usar a instância de `DBConnection` na sua aplicação.
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Encapsule condicionais
 
@@ -898,7 +898,7 @@ if ($article->isPublished()) {
 }
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Evite condicionais negativas
 
@@ -929,7 +929,7 @@ if (isDOMNodePresent($node)) {
 }
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Evite condicionais
 
@@ -1004,7 +1004,7 @@ class Cessna implements Airplane
 }
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Evite verificação de tipo (parte 1)
 
@@ -1035,7 +1035,7 @@ function travelToTexas(Traveler $vehicle)
 }
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Evite verificação de tipo (parte 2)
 
@@ -1070,7 +1070,7 @@ function combine(int $val1, int $val2)
 }
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Remova código morto
 
@@ -1107,7 +1107,7 @@ $request = requestModule($requestUrl);
 inventoryTracker('apples', $request, 'www.inventory-awesome.io');
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 
 ## Objetos e estrutura de dados
@@ -1183,7 +1183,7 @@ $bankAccount->withdrawBalance($shoesPrice);
 $balance = $bankAccount->getBalance();
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Faça objetos terem membros private/protected
 
@@ -1226,7 +1226,7 @@ $employee = new Employee('John Doe');
 echo 'Employee name: '.$employee->getName(); // Employee name: John Doe
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ## Classes
 
@@ -1304,7 +1304,7 @@ class UserSettings
 }
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Princípio do Aberto/Fechado (OCP)
 
@@ -1418,7 +1418,7 @@ class HttpRequester
 }
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Princício da Substituição de Liskov (LSP)
 
@@ -1550,7 +1550,7 @@ $shapes = [new Rectangle(), new Rectangle(), new Square()];
 renderLargeRectangles($shapes);
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Princípio da Segregação de interface (ISP)
 
@@ -1638,7 +1638,7 @@ class Robot implements Workable
 }
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Princípio da Injeção de dependências (DIP)
 
@@ -1725,7 +1725,7 @@ class Manager
 }
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Use method chaining
 
@@ -1816,7 +1816,7 @@ $car = (new Car())
   ->dump();
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ### Prefira composição do que herança
 
@@ -1905,7 +1905,7 @@ class Employee
 }
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ## Não repita você mesmo (DRY)
 
@@ -1992,7 +1992,7 @@ function showList($employees)
 }
 ```
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
 
 ## Traduções
 
@@ -2019,4 +2019,4 @@ Também disponível em outros idiomas:
    * [anilozmen/clean-code-php](https://github.com/anilozmen/clean-code-php)
 
 
-**[voltar para o topo](#sumário)**
+**[#voltar para o topo](#sumário)**
