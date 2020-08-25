@@ -3,7 +3,9 @@
 ## Sumário
 
   1. [Introdução](#introdução)
-  2. [Variáveis](#variáveis)
+  2. [Geral](#geral)
+     * [Use as tags de abertura e fechamento adequadas](#use-as-tags-de-abertura-e-fechamento-adequadas)
+  3. [Variáveis](#variáveis)
      * [Use variáveis pronunciáveis e com significado claro](#use-variáveis-pronunciaveis-e-com-significado-claro)
      * [Use o mesmo vocabulário para o mesmo tipo de variável](#use-o-mesmo-vocabulário-para-o-mesmo-tipo-de-variável)
      * [Use nomes pesquisáveis (parte 1)](#use-nomes-pesquisáveis-parte-1)
@@ -13,7 +15,7 @@
      * [Não coloque contexto desnecessário](#não-coloque-contexto-desnecessário)
      * [Use argumentos padrão ao invéis de condicionais](#use-argumentos-padrão-ao-invéis-de-condicionais)
      * [Evite ao máximo variáveis desnecessárias](#evite-ao-máximo-variáveis-desnecessárias)
-  3. [Funções](#funções)
+  4. [Funções](#funções)
      * [Parâmetros de funções (2 ou menos)](#parâmetros-de-funções-2-ou-menos)
      * [Funções devem fazer apenas uma coisa](#funções-devem-fazer-apenas-uma-coisa)
      * [Use type hinting para parâmetros de método](#use-type-hinting-para-parâmetros-de-método)
@@ -30,10 +32,10 @@
      * [Evite verificação de tipo (parte 1)](#evite-verificação-de-tipo-parte-1)
      * [Evite verificação de tipo (parte 2)](#evite-verificação-de-tipo-parte-2)
      * [Remova código morto](#remova-código-morto)
-  4. [Objetos e estrutura de dados](#objetos-e-estrutura-de-dados)
+  5. [Objetos e estrutura de dados](#objetos-e-estrutura-de-dados)
      * [Use getters e setters](#use-getters-e-setters)
      * [Faça objetos terem membros private/protected](#faça-objetos-terem-membros-privateprotected)
-  5. [Classes](#classes)
+  6. [Classes](#classes)
      * [S: Princípio da Responsabilidade Única (SRP)](#princípio-da-responsabilidade-Única-srp)
      * [O: Princípio do Aberto/Fechado (OCP)](#princípio-do-abertofechado-ocp)
      * [L: Princício da Substituição de Liskov (LSP)](#princício-da-substituição-de-liskov-lsp)
@@ -41,8 +43,8 @@
      * [D: Princípio da Injeção de dependências (DIP)](#princípio-da-injeção-de-dependências-dip)
      * [Use method chaining](#use-method-chaining)
      * [Prefira composição do que herança](#prefira-composição-do-que-herança)
-  6. [Não repita você mesmo (DRY)](#não-repita-você-mesmo)
-  7. [Traduções](#traduções)
+  7. [Não repita você mesmo (DRY)](#não-repita-você-mesmo)
+  8. [Traduções](#traduções)
 
 ## Introdução
 
@@ -56,6 +58,33 @@ universalmente acordados. Estas são orientações e nada mais, mas são codific
 anos de experiência coletiva pelos autores do *Clean Code*.
 
 Inspirado em [clean-code-javascript](https://github.com/ryanmcdermott/clean-code-javascript)
+
+## Geral
+
+### Use as tags de abertura e fechamento adequadas
+
+Utilize as tags `<?php ?>` no lugar de `<? ?>`. Na maioria das vezes os desenvolvedores adoram atalhos e simplificações de implementações como o `short tags` do PHP. Evite isso! Uma boa IDE deve ser capaz de lhe ajudar com o auto-complete nesses casos não havendo desculpa para tal.
+Lembre-se que o `short tags sintax` não vem habilitado no arquivo `php.ini` por padrão e você deve efetuar a configuração manualmente para um correto funcionamento quando utilizado desse recurso.
+
+**Ruim**
+```php
+<?
+  echo "Hello world";
+?>
+ 
+<?="Hello world"; ?>
+```
+
+**Bom**
+```php
+<?php 
+  echo 'Hello world';
+?>
+
+<?php echo 'Hello world'; ?>
+```
+
+**[#voltar para o topo](#sumário)**
 
 ## Variáveis
 
