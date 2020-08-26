@@ -15,6 +15,7 @@
      * [Não coloque contexto desnecessário](#não-coloque-contexto-desnecessário)
      * [Use argumentos padrão ao invéis de condicionais](#use-argumentos-padrão-ao-invéis-de-condicionais)
      * [Evite ao máximo variáveis desnecessárias](#evite-ao-máximo-variáveis-desnecessárias)
+     * [Não use abreviações](#nao-use-abreviacoes)
   4. [Funções](#funções)
      * [Parâmetros de funções (2 ou menos)](#parâmetros-de-funções-2-ou-menos)
      * [Funções devem fazer apenas uma coisa](#funções-devem-fazer-apenas-uma-coisa)
@@ -57,7 +58,9 @@ Nem todos os princípios aqui contidos devem ser rigorosamente seguidos, e muito
 universalmente acordados. Estas são orientações e nada mais, mas são codificadas em muitos
 anos de experiência coletiva pelos autores do *Clean Code*.
 
-Inspirado em [clean-code-javascript](https://github.com/ryanmcdermott/clean-code-javascript)
+* "Código limpo sempre parece que foi escrito por alguém que se importa". Michael Feathers
+* "Você sabe que está trabalhando em um código limpo quando cada rotina que você lê acaba sendo exatamente o que você espera". Ward Cunningham
+* "Qualquer tolo pode escrever um código que o computador possa entender. Bons programadores escrevem códigos que humanos possam entender". Martin Fowler 
 
 ## Geral
 
@@ -93,13 +96,13 @@ Lembre-se que o `short tags sintax` não vem habilitado no arquivo `php.ini` por
 **Ruim:**
 
 ```php
-$ymdstr = $moment->format('y-m-d');
+$ymdstr = $date->format('y-m-d');
 ```
 
 **Bom:**
 
 ```php
-$currentDate = $moment->format('y-m-d');
+$currentDate = $date->format('y-m-d');
 ```
 
 **[#voltar para o topo](#sumário)**
@@ -353,7 +356,38 @@ public function create()
 
 **[#voltar para o topo](#sumário)**
 
+### Não use abreviações
+
+Abreviações nada mais são do que palavras que você basicamente usa em mensagens de texto, só. Nada favorece o leitor do seu código traduzir o que as variáveis significam colaborando com o mapeamento mental.
+
+**Ruim:**
+
+```php
+$d = [...];
+
+$ord = Order::create($d);
+// ...
+$ord->notify();
+```
+
+**Bom:**
+
+```php
+$orderData = [...];
+
+$order = Order::create($orderData);
+// ...
+$order->notify();
+```
+
+**[#voltar para o topo](#sumário)**
+
 ## Funções
+
+Para estruturar um código limpo, é necessário criar funções simples, pequenas e claras. Segundo Robert, as duas regras principais das funções são as seguintes:
+
+1) Elas precisam ser pequenas
+2) Elas precisam de ser ainda menores
 
 ### Parâmetros de funções (2 ou menos)
 
