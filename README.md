@@ -5,6 +5,7 @@
   1. [Introdução](#introdução)
   2. [Geral](#geral)
      * [Use as tags de abertura e fechamento adequadas](#use-as-tags-de-abertura-e-fechamento-adequadas)
+     * [Comente apenas o necessário](#comente-apenas-o-necessário)
   3. [Variáveis](#variáveis)
      * [Use variáveis pronunciáveis e com significado claro](#use-variáveis-pronunciaveis-e-com-significado-claro)
      * [Use o mesmo vocabulário para o mesmo tipo de variável](#use-o-mesmo-vocabulário-para-o-mesmo-tipo-de-variável)
@@ -85,6 +86,59 @@ Lembre-se que o `short tags sintax` não vem habilitado no arquivo `php.ini` por
 ?>
 
 <?php echo 'Hello world'; ?>
+```
+
+**[#voltar para o topo](#sumário)**
+
+### Comente apenas o necessário
+
+Esse princípio afirma que comentários podem ser feitos, porém, se forem realmente necessários. Segundo Uncle Bob, os comentários mentem. E isso tem uma explicação lógica.
+
+O que ocorre é que, enquanto os códigos são constantemente modificados, os comentários não. Eles são esquecidos e, portanto, deixam de retratar a funcionalidade real dos códigos.
+
+Logo, se for para comentar, que seja somente o necessário e que seja revisado juntamente com o código que o acompanha.
+
+**Ruim:**
+
+```php
+/** Get the user details */
+public function getUser(int $id)
+{
+  /** Fetch the user details by id */
+  $user = User::where('id', $id)->first();
+
+  /** Calling function to calculate user's current month salary */
+  $this->currentMonthSalary($user);
+  
+  /** return the user */
+  return $user;
+}
+
+/** Calculating the current month salary of user */
+private function currentMonthSalary(User $user)
+{
+  /** Salary = (Total Days - Leave Days) * PerDay Salary */
+  // ...
+}
+```
+
+**Bom:**
+
+```php
+public function getUser(int $id)
+{
+  $user = User::where('id', $id)->first();
+
+  $this->currentMonthSalary($user);
+
+  return $user;
+}
+
+private function currentMonthSalary(User $user)
+{
+  /** Salary = (Total Days - Leave Days) * PerDay Salary */
+  // ...
+}
 ```
 
 **[#voltar para o topo](#sumário)**
