@@ -586,7 +586,7 @@ class Email
 }
 
 $message = new Email(...);
-// What is this? A handle for the message? Are we writing to a file now?
+// O que é isso? Um identificador para a mensagem? Estamos gravando em um arquivo agora?
 $message->handle();
 ```
 
@@ -604,7 +604,7 @@ class Email
 }
 
 $message = new Email(...);
-// Clear and obvious
+// Claro e óbvio
 $message->send();
 ```
 
@@ -662,7 +662,7 @@ function parseBetterJSAlternative($code)
 }
 ```
 
-**Bad too:**
+**Ruim também:**
 
 Cuidamos de algumas funcionalidades, mas a função `parseBetterJSAlternative()`  ainda é muito complexa e não testavel.
 
