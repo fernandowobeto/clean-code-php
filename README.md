@@ -184,7 +184,7 @@ getUser();
 
 Nós vamos ler mais código do que escrever. É importante que o código que nós escrevemos seja
 legível e pesquisável. Por *não* nomear variáveis que sejam significativas para o entendimento
-do nosso programa, nós machucamos nossos leitores.
+do nosso programa, nós machucamos nossos "leitores".
 Escreva variáveis com nomes pesquisáveis.
 
 **Ruim:**
@@ -316,7 +316,7 @@ Se o nome de sua classe/objeto diz alguma coisa, não repita no nome de suas pro
 ```php
 class Car
 {
-    public $carMake;
+    public $carBrand;
     public $carModel;
     public $carColor;
 
@@ -329,7 +329,7 @@ class Car
 ```php
 class Car
 {
-    public $make;
+    public $brand;
     public $model;
     public $color;
 
